@@ -1,33 +1,62 @@
-//
-// Created by Roei Biton on 02/09/2024.
-//
+//roei.biton33@gmail.com
+//206400426
 
-#ifndef SP2EX2_NODE_HPP
-#define SP2EX2_NODE_HPP
-
+#ifndef NODE_HPP
+#define NODE_HPP
 #include "Complex.hpp"
 #include <vector>
 
-
-template<typename T>
+/**
+ * @brief A class template representing a node in for a tree structure.
+ * 
+ * @tparam T The type of value stored in the node.
+ */
+template <typename T>
 class Node {
 private:
     T value;
-    std::vector<Node<T> *> children;
-public:
+    std::vector<Node<T>*> children;
 
+public:
+    /**
+     * @brief Constructor to initialize the node with a value.
+     * 
+     * @param val The value to be stored in the node.
+     */
     explicit Node(T val) : value(val) {}
 
-    ~Node() = default;
+    /**
+     * @brief Destructor for the Nod.
+     * 
+     * This destructor does not perform any specific cleanup since children nodes
+     * are managed separately.
+     */
+    ~Node() {}
 
+    /**
+    * @brief Getter function to retrieve the value stored in the node.
+    *
+    * @return The value stored in the node.
+    */
     T get_value() const { return value; }
 
+    /**
+    * @brief Getter function to retrieve the children of the node.
+    *
+    * @return The value stored in the node.
+    */
     std::vector<Node<T> *> &getChildren() { return children; }
 
-    void addChildren(const Node<T> &newNode) { children.push_back(new Node<T>(newNode)); }
+    /**
+    * @brief function that add children to node.
+    *
+    */
 
-
+    void addChildren(const Node<T> &newNode) {
+        children.push_back(new Node<T>(newNode));
+    }
 };
 
 
-#endif //SP2EX2_NODE_HPP
+
+#endif // NODE_HPP

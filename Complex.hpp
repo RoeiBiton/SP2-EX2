@@ -1,19 +1,15 @@
-//
-// Created by Roei Biton on 02/09/2024.
-//
-
-#ifndef SP2EX2_COMPLEX_HPP
-#define SP2EX2_COMPLEX_HPP
-
 #include <iostream>
 #include <cmath>
 using namespace std;
 
+/**
+ * @brief This is a class that describe a complex number
+ */
 class Complex {
 private:
     double real;
     double imag;
-
+    
 public:
 
     Complex(double r = 0, double i = 0) : real(r), imag(i) {}
@@ -29,7 +25,6 @@ public:
     Complex operator + (const Complex& other) const {
         return Complex(real + other.real, imag + other.imag);
     }
-
     bool operator < (const Complex& other) const {
         //return this->real < other.real && this->imag < other.imag;
         return std::sqrt(real * real + imag * imag) < std::sqrt(other.real * other.real + other.imag * other.imag);
@@ -46,4 +41,4 @@ public:
 
 
 };
-#endif //SP2EX2_COMPLEX_HPP
+
