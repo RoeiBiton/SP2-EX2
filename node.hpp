@@ -1,6 +1,7 @@
-//roei.biton33@gmail.com
-//206400426
-
+/**
+ * Created by Roei Biton
+ * Gmail: roei.biton33@gmail.com
+ * */
 #ifndef NODE_HPP
 #define NODE_HPP
 #include "Complex.hpp"
