@@ -1,7 +1,7 @@
-
-//roei.biton33@gmail.com
-//206400426
-
+/**
+ * Created by Roei Biton
+ * Gmail: roei.biton33@gmail.com
+ * */
 #include <iostream>
 #include <string>
 #include "node.hpp"
