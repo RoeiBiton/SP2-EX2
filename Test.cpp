@@ -1,4 +1,7 @@
-
+/**
+ * Created by Roei Biton
+ * Gmail: roei.biton33@gmail.com
+ * */
 #include "doctest.h"
 #include "tree.hpp"
 
@@ -11,8 +14,8 @@ TEST_CASE("Node creation and basic functionality") {
     CHECK(node.get_value() == 5);
     CHECK(node.getChildren().empty());
     //string example
-    Node<string> node2("hagit");
-    CHECK(node2.get_value() == "hagit");
+    Node<string> node2("Joni");
+    CHECK(node2.get_value() == "Joni");
     CHECK(node2.getChildren().empty());
     //double example
     Node<double> node3(2.178);
